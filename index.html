@@ -877,9 +877,7 @@ window.addEventListener('load',()=>{
         curId=data.curId;
         if(!maps.find(m=>m.id===curId))curId=maps[0].id;
         const cm=CM();px=cm.spx;py=cm.spy;scl=cm.sscl;
-        _rec=false;
         if(cm.hist.length)restoreSnap(cm.hist[cm.hist.length-1],true);
-        _rec=true;
         syncHist();applyTx();syncBtns();syncMapName();renderMaps();
         loaded=true;
       }
